@@ -1,0 +1,35 @@
+.navBar-container {
+  height: 60px;
+  background-color: #00a2e1;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+}
+
+.uniLife-logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 150px;
+}
+.navBar-navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  cursor: pointer;
+}
+
+.navBar-btns {
+  display: flex;
+  align-items: center;
+}
+
+.header-btns p {
+  padding: 0 10px;
+}
+.navBar-icons {
+  font-size: 30px;
+  padding-right: 2%;
+}
