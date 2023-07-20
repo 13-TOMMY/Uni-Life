@@ -1,52 +1,57 @@
-.homepage-container{
-   /* margin-top: var(--header-height); */
-   min-width: 100vh;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
+.homepage-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.homepage-banner {
+  position: relative;
+  z-index: 1;
+}
+.homepage-searchbar {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+.homepage-container h2 {
+  margin-top: 20px;
+}
+.cities-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
 }
 
-.homepage-container h2{
-   margin-top: 20px;
-}
-.cities-container{
-   display: flex;
-   flex-wrap: wrap;
-   margin: 10px;
+.compare-boxes {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.compare-boxes{
-   display: flex;
-   justify-content: space-around;
-   align-items: center;
+.compare-container {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
-.compare-container{
-   margin: 20px;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   text-align: center;
+.homepage-bottom {
+  display: flex;
 }
 
-.homepage-bottom{
-   display: flex;
+.homepage-bottom img {
+  width: 35%;
 }
 
-.homepage-bottom img{
-   width: 35%;
+.bottom-left {
+  display: flex;
+  flex-direction: column;
 }
 
-.bottom-left{
-   display: flex;
-   flex-direction: column;
-}
-
-.see-cities-btn{
-   width: 200px;
-   border-radius: 8px;
-   color: white;
-   background-color: #3A5295;
-   padding: 8px;
+.see-cities-btn {
+  width: 200px;
+  border-radius: 8px;
+  color: white;
+  background-color: #3a5295;
+  padding: 8px;
 }

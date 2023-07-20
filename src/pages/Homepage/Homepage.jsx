@@ -3,6 +3,8 @@ import axios from 'axios'
 import Banner from '../../components/Banner/Banner'
 import SearchBar from '../../components/SearchBar/SearchBar'
 import './Homepage.css'
+import CityPickImg from '../../components/CityPickImg/CityPickImg'
+import CompareHp from '../../components/CompareHp/CompareHp'
 
 function Homepage() {
   const [cities, setCities] = React.useState([])
@@ -20,11 +22,20 @@ function Homepage() {
     
   }, [])
   return (
-    <div>
-      <Banner headline={"Find student homes with bills included"}
-             subhead={"A simple and faster way to search for student accomodations"} 
-        />
-      <SearchBar cities={cities}  />
+    <div className='homepage-container'>
+      <div className='homepage-banner'>
+        <Banner headline={"Find student homes with bills included"}
+             subhead={"A simple and faster way to search for student accomodations"} />
+      </div>
+      <div className='homepage-searchbar'>
+        <SearchBar cities={cities}  />
+      </div>
+      <div>
+        <CityPickImg />
+      </div>
+      <div>
+        <CompareHp />
+      </div>
     </div>
   )
 }

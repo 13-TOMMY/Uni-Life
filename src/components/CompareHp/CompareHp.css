@@ -1,0 +1,29 @@
+.cities-container{
+   display: flex;
+   flex-wrap: wrap;
+   margin: 10px;
+}
+
+.compare-boxes{
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+}
+
+.compare-container{
+   margin: 20px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   text-align: center;
+}
+
+.compare-box{
+   background-color: #F6FAFD;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content:space-around;
+   height: 250px;
+   padding: 20px;
+}
