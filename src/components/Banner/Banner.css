@@ -23,6 +23,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 80%;
   transform: translate(-50%, -50%);
   color: white;
   text-align: center;
@@ -38,4 +39,20 @@
 .banner-text h4 {
   font-size: 24px;
   font-weight: 400;
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .banner-text h1 {
+    font-size: 56px;
+  }
+  .banner-text h4 {
+    font-size: 22px;
+  }
+}
+@media (max-width: 768px) {
+  .banner-text h1 {
+    font-size: 48px;
+  }
+  .banner-text h4 {
+    font-size: 20px;
+  }
 }

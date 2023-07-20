@@ -1,0 +1,44 @@
+.city-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.cityPick-h2 {
+  text-align: center;
+}
+.city-card {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 300px;
+  position: relative;
+  border-radius: 24px;
+  margin: 20px;
+}
+
+.city-info {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  border-radius: 24px;
+}
+
+.see-cities-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 15px 20px;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 12px;
+  background: #3a5295;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
