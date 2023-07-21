@@ -8,8 +8,8 @@ function NavBar() {
   return (
     <div className='navBar-container'>
       <Link to='/' className='uniLife-logo'>
-        <img src="src/assets/houses.png" alt="UniLife Logo" />
-        <img src="src/assets/UniLife.svg" alt="UniLife" />
+        <img src="../public/houses.png" alt="UniLife Logo" />
+        <img src="../public/UniLife.svg" alt="UniLife" />
       </Link>
       <div className="navBar-btns">
       <div className="navBar-btns" onClick={() => navigate('/favorites')}>

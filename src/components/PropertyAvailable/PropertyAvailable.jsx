@@ -1,40 +1,44 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { MdOutlineBed, MdOutlineBathtub, MdOutlineHome, MdOutlineLocationOn } from "react-icons/md";
-import { BsCurrencyPound } from "react-icons/bs";
-import './PropertyAvailable.css'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { MdOutlineBed, MdOutlineBathtub, MdOutlineHome, MdOutlineLocationOn } from 'react-icons/md';
+import { BsCurrencyPound } from 'react-icons/bs';
+import './PropertyAvailable.css';
 
-function PropertyAvailable({data}) {
+function PropertyAvailable({ data }) {
+  const { _id, images, rent, bedroom_count, bathroom_count, property_type, furnished, address } = data;
+
   return (
-   <Link className="property-container" to={`/homedetails/${data._id}`}>
-   <img src={data.images[0]} className="property-img" />
-   <div className="info-bar">
-       <div className="info-bar-left">  
-           <h3><span><BsCurrencyPound /></span>{data?.rent}</h3>
-           <p>pppw including bills</p>
-       </div>
-       <div className="info-bar-right">
-           
-           <p><span>< MdOutlineBed/></span>{data?.bedroom_count}</p>
-           
-           <p><span>< MdOutlineBathtub/></span>{data?.bathroom_count}</p>
-       </div>
-   </div>
-   <div className="prop-info">
-       <div className="type-bar">
-           <p>{data?.property_type}</p> 
-           <p>{data?.furnished}</p> 
-       </div>
-       <p><span>< MdOutlineLocationOn/></span>{data?.address.street} {data?.address.city} {data?.address.postcode}</p>
-   </div>
-   <div className="view-bar">
-       {/* <img src={house}/> */}
-       
-       <p><span>< MdOutlineHome/></span>View Home</p>
-   </div>
-</Link>
-
-  )
+    <Link className="property-container" to={`/homedetails/${_id}`}>
+      <img src={images[0]} className="property-img" />
+      <div className="info-box">
+        <div className="info-box-left">
+          <h3>
+            <span><BsCurrencyPound /></span>
+            {rent}
+          </h3>
+          <p className='p-info-box'>pppw including bills</p>
+        </div>
+        <div className="info-box-right">
+          <p><span><MdOutlineBed /></span>{bedroom_count}</p>
+          <p><span><MdOutlineBathtub /></span>{bathroom_count}</p>
+        </div>
+      </div>
+      <div className="prop-info">
+        <div className="top-box">
+          <p>{property_type}</p>
+          <p>{furnished}</p>
+        </div>
+        <p>
+          <span><MdOutlineLocationOn /></span>
+          {`${address.street} ${address.city} ${address.postcode}`}
+        </p>
+      </div>
+      <div className="view-box">
+          <span><MdOutlineHome /></span>
+        <p>View Home</p>
+      </div>
+    </Link>
+  );
 }
 
-export default PropertyAvailable
+export default PropertyAvailable;
