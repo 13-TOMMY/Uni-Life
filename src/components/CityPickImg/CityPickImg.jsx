@@ -21,7 +21,7 @@ function CityPickImg() {
         {cities.map((city) => (
           <Link to={`/citydetails/${city._id}`} key={city._id}>
             <div
-              className="city-card" // Use the CSS class name for CityCard
+              className="city-card"
               style={{
                 backgroundImage: `url("${city.image_url}")`,
               }}

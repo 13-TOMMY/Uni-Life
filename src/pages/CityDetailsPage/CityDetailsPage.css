@@ -1,0 +1,55 @@
+.city-details-container{
+    
+   min-width: 100vh;
+   display: flex;
+   flex-direction: column;
+   /* display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center; */
+}
+.cityDeatils-banner {
+   position: relative;
+   z-index: 1;
+ }
+ .cityDeatils-homeSearch {
+   width: 100%;
+   position: relative;
+   z-index: 2;
+ }
+.city-details-container h2{
+   padding: 10px;
+   margin-left: 50px;
+}
+.properties{
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: center;
+}
+
+
+
+.description-box{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 20px;
+   background-color:aliceblue;
+   margin: 30px;
+   border-radius: 16px;
+}
+
+.description-text{
+   margin: 10px;
+
+}
+.description-text p{
+   margin: 10px;
+   line-height: 1.5rem;
+}
+
+.description-img{
+   width: 40%;
+   border-radius: 16px;
+}
