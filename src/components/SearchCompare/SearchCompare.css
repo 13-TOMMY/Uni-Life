@@ -1,0 +1,82 @@
+.searchCompare {
+  margin: 5% 10% 0 10%;
+}
+
+.searchCompare-container {
+  display: flex;
+}
+
+.sC-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 65%;
+}
+
+.text-container {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.text-container img {
+  width: 64px;
+  height: 64px;
+}
+
+.text-right {
+  width: 70%;
+  margin: 20px;
+}
+
+.text-right h3 {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 40px;
+}
+
+.text-right p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+.searchCompare-btn {
+  margin-left: 20%;
+  width: 250px;
+  height: 50px;
+  border-radius: 12px;
+  color: white;
+  background-color: #3a5295;
+  padding: 8px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+.sC-right {
+  width: 456px;
+  height: 493.581px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .searchCompare-container {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10%;
+  }
+  .text-container {
+    display: none;
+  }
+  .sC-right {
+    display: none;
+  }
+  .sC-left {
+   align-items: center;
+  }
+  .searchCompare-btn {
+    display: block;
+    margin: 0;
+  }
+}

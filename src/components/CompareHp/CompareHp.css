@@ -1,29 +1,48 @@
-.cities-container{
-   display: flex;
-   flex-wrap: wrap;
-   margin: 10px;
+.compare-container {
+  margin: 5%;
+  display: flex;
+  padding: 5%;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: #f6fafd;
+  border-radius: 24px;
+}
+.compare-container h1 {
+  font-size: 36px;
+  font-weight: 500;
+}
+.compare-boxes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.compare-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5%;
+  height: 300px;
+  padding: 20px;
+}
+.compare-box h3 {
+  font-size: 28px;
+  font-weight: 500;
+  color: #000;
+}
+.compare-box p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  color: #383838;
 }
 
-.compare-boxes{
-   display: flex;
-   justify-content: space-around;
-   align-items: center;
-}
-
-.compare-container{
-   margin: 20px;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   text-align: center;
-}
-
-.compare-box{
-   background-color: #F6FAFD;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content:space-around;
-   height: 250px;
-   padding: 20px;
+@media (max-width: 768px) {
+   .compare-boxes {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+    }
 }

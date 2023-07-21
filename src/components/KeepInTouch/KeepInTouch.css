@@ -70,3 +70,22 @@ input {
   font-size: 30px;
   margin: 0 10px;
 }
+@media (max-width: 768px) {
+  .contacts-container{
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: 700px;
+    padding: 10% 10%;
+  }
+  .contacts-left{
+    height: 50%;
+    width: 100%;
+  }
+  .contacts-right{
+    height: 50%;
+    width: 100%;
+    justify-content: center;
+    gap: 2%;
+  }
+}

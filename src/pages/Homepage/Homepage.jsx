@@ -2,15 +2,16 @@ import React, {useState} from 'react'
 import axios from 'axios'
 import Banner from '../../components/Banner/Banner'
 import SearchBar from '../../components/SearchBar/SearchBar'
-import './Homepage.css'
 import CityPickImg from '../../components/CityPickImg/CityPickImg'
 import CompareHp from '../../components/CompareHp/CompareHp'
+import SearchCompare from '../../components/SearchCompare/SearchCompare'
+import './Homepage.css'
+
 
 function Homepage() {
   const [cities, setCities] = React.useState([])
 
   React.useEffect(() => {
-    //call api to get cities info
     console.log("homepage loaded")
 
     axios.get("https://unilife-server.herokuapp.com/cities?limit=9")
@@ -30,11 +31,14 @@ function Homepage() {
       <div className='homepage-searchbar'>
         <SearchBar cities={cities}  />
       </div>
-      <div>
+      <div className='city-pick-container'>
         <CityPickImg />
       </div>
       <div>
         <CompareHp />
+      </div>
+      <div>
+        <SearchCompare />
       </div>
     </div>
   )
