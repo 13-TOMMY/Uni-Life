@@ -47,7 +47,7 @@ function CityDetailsPage() {
   }, [cityid, bedcount, beds, baths, type, maxPrice]);
 
   return (
-    <div className='city-deatils'>
+    <div className='city-deatils-container'>
       <div className="cityDeatils-banner">
       <Banner
         headline={"Search Accommodations"}
@@ -57,18 +57,21 @@ function CityDetailsPage() {
       <div className="cityDeatils-homeSearch">
       <HomeSearch setBeds={setBeds} setBaths={setBaths} setMaxPrice={setMaxPrice} setType={setType} />
       </div>
-      <h2>{numProperties} homes in {properties[0]?.address?.city}</h2>
-
+      <div className='properties-container'>
+      <h2 className='h2-city-container'>{numProperties} homes in {properties[0]?.address?.city}</h2>
       <div className="properties">
-        {properties.map((item) => <PropertyAvailable key={item.id} data={item} />)}
+        {properties.map((item) => (
+          <PropertyAvailable key={item._id} data={item} />
+        ))}
       </div>
-
       <div className="description-box">
         <div className="description-text">
-          <p>{city?.universities}</p>
+          <h3>Being a student in {city?.name}</h3>
           <p>{city?.student_life}</p>
+          <p>{city?.universities}</p>
         </div>
-        <img src='src/assets/students.png' alt="student" className="description-img" />
+        <img src='../public/students.png' className="description-img" alt="student image"/>
+      </div>
       </div>
     </div>
   )
