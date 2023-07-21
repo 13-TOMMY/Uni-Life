@@ -60,7 +60,7 @@
   height: 493.581px;
 }
 
-@media only screen and (max-width: 1024px) {
+@media (max-width: 1024px) {
   .searchCompare-container {
     flex-direction: column;
     align-items: center;
