@@ -34,7 +34,7 @@ function CityPickImg() {
           </Link>
         ))}
       </div>
-      <Link to="/allcities">
+      <Link to="/SeeAllCities">
         <button className="see-cities-btn">See All Cities</button>
       </Link>
     </div>

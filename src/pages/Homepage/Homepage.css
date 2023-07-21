@@ -12,46 +12,8 @@
   position: relative;
   z-index: 2;
 }
-.homepage-container h2 {
-  margin-top: 20px;
-}
-.cities-container {
+.city-pick-container{
+  margin-top: 3%;
   display: flex;
-  flex-wrap: wrap;
-  margin: 10px;
-}
-
-.compare-boxes {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.compare-container {
-  margin: 20px;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  text-align: center;
-}
-
-.homepage-bottom {
-  display: flex;
-}
-
-.homepage-bottom img {
-  width: 35%;
-}
-
-.bottom-left {
-  display: flex;
-  flex-direction: column;
-}
-
-.see-cities-btn {
-  width: 200px;
-  border-radius: 8px;
-  color: white;
-  background-color: #3a5295;
-  padding: 8px;
 }
