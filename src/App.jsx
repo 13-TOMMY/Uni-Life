@@ -13,7 +13,7 @@ function App() {
   return (
     <BrowserRouter>
       <FavContextProvider>
-        <NavBar />
+        <NavBar className="navbar-container"/>
           <Routes>
             <Route path='/' element={<Homepage />} />
             <Route path='/SeeAllCities' element={<SeeAllCitiesPage />} />
