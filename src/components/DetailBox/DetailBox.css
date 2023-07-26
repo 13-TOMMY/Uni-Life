@@ -1,0 +1,26 @@
+.details-container{
+   width: 450px;
+   height: 400px;
+   border: 1px solid grey;
+   display: flex;
+   flex-direction: column;
+   border-radius: 12px;
+}
+
+.details-top{
+   text-align: center;
+   margin: 30px 0;
+   padding-bottom: 20px;
+   border-bottom: 1px solid grey;
+}
+
+.details-row{
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   
+   padding: 0 10px;
+   
+   
+   
+}

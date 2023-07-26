@@ -1,0 +1,25 @@
+.image-container{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.image-top{
+   width: 480px;
+   height: 300px;
+   margin: 10px;
+   border-radius: 24px;
+}
+
+.image-bottom{
+   display: flex;
+}
+
+.image-bottom img{
+   width: 30%;
+   /* width: 140px;
+   height: 110px; */
+   margin: 10px;
+   border-radius: 12px;
+}
