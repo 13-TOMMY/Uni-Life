@@ -1,6 +1,23 @@
-.bed-prices{
-   border: 1px solid gray;
-   padding: 10px;
-   display: flex;
-   justify-content: space-between;
+.bedrooms-box h2{
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 48px;
+  padding-bottom: 2%;
+}
+.bed-box :first-child {
+  border-radius: 24px 24px 0 0;
+}
+.bed-box :last-child {
+  border-radius: 0 0 24px 24px;
+}
+.bed-prices {
+  border: 1px solid #ced3d8;
+  height: 65px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
 }
