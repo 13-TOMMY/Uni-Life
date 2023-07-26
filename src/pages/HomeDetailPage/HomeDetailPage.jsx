@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import axios from 'axios';
 import Modal from 'react-modal';
 import { useParams } from 'react-router-dom';
@@ -6,18 +6,19 @@ import { FavContext } from '../../contexts/FavContext';
 import ImageBox from '../../components/ImageBox/ImageBox';
 import DetailBox from '../../components/DetailBox/DetailBox';
 import BedroomBox from '../../components/BedroomBox/BedroomBox';
+import { GrCheckmark } from 'react-icons/gr';
+import { AiOutlineHeart } from 'react-icons/ai';
 import './HomeDetailPage.css';
 
 function HomeDetailPage() {
+  // State and Context Hooks
   const { favorites, setFavorites } = useContext(FavContext);
   const [showModal, setShowModal] = useState(false);
-
   const { homeid } = useParams();
-
   const [property, setProperty] = useState();
   const [propertyImages, setPropertyImages] = useState([]);
 
-  // Missing functions for the modal
+  // Functions to handle the modal
   const openModal = () => {
     setShowModal(true);
   };
@@ -26,11 +27,12 @@ function HomeDetailPage() {
     setShowModal(false);
   };
 
+  // Function to add the current property to favorites
   const addToFavorites = () => {
-    // Add property object to favorites
     setFavorites([...favorites, property]);
   };
 
+  // Fetch property details and images on component mount
   useEffect(() => {
     axios
       .get(`https://unilife-server.herokuapp.com/properties/${homeid}`)
@@ -42,53 +44,77 @@ function HomeDetailPage() {
   }, [homeid]);
 
   return (
-    <div className="home-grid">
-      <ImageBox pics={propertyImages} className="photo-box" />
+    <div className="home-detail-page">
 
-      <div className="upper-right">
+      <div className="top-hdp">
+      <div className="left-top-hdp">
+      {/* Display property images */}
+      <ImageBox pics={propertyImages} className="photo-box" />
+      </div>
+
+      <div className="right-top-hdp">
+        {/* Display property details */}
         <DetailBox className="info-box" property={property} />
+
         <div className="btn-container">
-          <button className="short-btn" onClick={addToFavorites}>
-            Shortlist
+          {/* Shortlist button */}
+          <button className="shortlist-btn" onClick={addToFavorites}>
+          <AiOutlineHeart className='shortlist-heart'/> Shortlist
           </button>
+
+          {/* Book Viewing button */}
           <button className="view-btn" onClick={openModal}>
             Book Viewing
           </button>
         </div>
       </div>
+      </div>
 
+      <div className="middle-hdp">
+      <div className="left-middle-hdp">
       <div>
+        {/* Property description */}
         <h2>Description</h2>
         <p>{property?.property_description}</p>
       </div>
-
+      </div>
+      <div className="left-middle-hdp">
+      {/* Bedroom prices */}
       <BedroomBox prices={property?.bedroom_prices} />
-
-      <div>
+      </div>
+      </div>
+      <div className='bottom-hdp'>
         <h2>Key Features</h2>
-        <ul style={{ listStyleImage: `url('${checkmark}')` }}>
+        <ul style={{ listStyleType: 'none' }}>
           {property?.key_features.map((item) => (
-            <li key={item}>{item}</li>
+            <li key={item}>
+              <div style={{ display: 'flex', alignItems: 'center', padding: '10px 0'}}>
+                <GrCheckmark style={{ marginRight: '5px' }} />
+                {item}
+              </div>
+            </li>
           ))}
         </ul>
       </div>
 
+      {/* Modal for booking a viewing */}
       <Modal
         isOpen={showModal}
         onRequestClose={closeModal}
         className="modal-container"
         overlayClassName="modal-background"
       >
-        {/* Modal content goes here */}
         <div className="modal-top">
+          {/* Modal header */}
           <h1>Book A Viewing</h1>
           <h3>
-            {address?.postcode} {address?.street}
+            {property?.address?.postcode} {property?.address?.street}
           </h3>
-          <h3>{address?.city}</h3>
+          <h3>{property?.address?.city}</h3>
         </div>
+
         <form className="modal-form">
-          {/* Form fields go here */}
+          {/* Form inputs */}
           <div className="form-half">
             <div className="input-wrapper">
               <label>Name </label>
@@ -113,6 +139,7 @@ function HomeDetailPage() {
                 placeholder="Enter your message"
               ></textarea>
             </div>
+            {/* Submit button */}
             <button className="modal-btn" onClick={closeModal}>
               Submit
             </button>
@@ -124,3 +151,4 @@ function HomeDetailPage() {
 }
 
 export default HomeDetailPage;
+
