@@ -1,0 +1,6 @@
+.bed-prices{
+   border: 1px solid gray;
+   padding: 10px;
+   display: flex;
+   justify-content: space-between;
+}
