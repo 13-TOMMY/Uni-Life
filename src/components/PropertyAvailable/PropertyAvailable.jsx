@@ -10,7 +10,7 @@ function PropertyAvailable({ data }) {
   return (
     <Link className="property-container" to={`/homedetails/${_id}`}>
       <img src={images[0]} className="property-img" />
-      <div className="info-box">
+      <div className="info-box-pa">
         <div className="info-box-left">
           <h3>
             <span><BsCurrencyPound /></span>

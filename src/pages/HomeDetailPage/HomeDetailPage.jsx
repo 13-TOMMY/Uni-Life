@@ -11,14 +11,12 @@ import { AiOutlineHeart } from 'react-icons/ai';
 import './HomeDetailPage.css';
 
 function HomeDetailPage() {
-  // State and Context Hooks
   const { favorites, setFavorites } = useContext(FavContext);
   const [showModal, setShowModal] = useState(false);
   const { homeid } = useParams();
   const [property, setProperty] = useState();
   const [propertyImages, setPropertyImages] = useState([]);
 
-  // Functions to handle the modal
   const openModal = () => {
     setShowModal(true);
   };
@@ -27,12 +25,10 @@ function HomeDetailPage() {
     setShowModal(false);
   };
 
-  // Function to add the current property to favorites
   const addToFavorites = () => {
     setFavorites([...favorites, property]);
   };
 
-  // Fetch property details and images on component mount
   useEffect(() => {
     axios
       .get(`https://unilife-server.herokuapp.com/properties/${homeid}`)
@@ -48,21 +44,17 @@ function HomeDetailPage() {
 
       <div className="top-hdp">
       <div className="left-top-hdp">
-      {/* Display property images */}
       <ImageBox pics={propertyImages} className="photo-box" />
       </div>
 
       <div className="right-top-hdp">
-        {/* Display property details */}
-        <DetailBox className="info-box" property={property} />
+        <DetailBox property={property} />
 
         <div className="btn-container">
-          {/* Shortlist button */}
           <button className="shortlist-btn" onClick={addToFavorites}>
           <AiOutlineHeart className='shortlist-heart'/> Shortlist
           </button>
 
-          {/* Book Viewing button */}
           <button className="view-btn" onClick={openModal}>
             Book Viewing
           </button>
@@ -72,14 +64,12 @@ function HomeDetailPage() {
 
       <div className="middle-hdp">
       <div className="left-middle-hdp">
-      <div>
-        {/* Property description */}
+      <div className='desc-middle-hdp'>
         <h2>Description</h2>
         <p>{property?.property_description}</p>
       </div>
       </div>
       <div className="left-middle-hdp">
-      {/* Bedroom prices */}
       <BedroomBox prices={property?.bedroom_prices} />
       </div>
       </div>
@@ -88,8 +78,8 @@ function HomeDetailPage() {
         <ul style={{ listStyleType: 'none' }}>
           {property?.key_features.map((item) => (
             <li key={item}>
-              <div style={{ display: 'flex', alignItems: 'center', padding: '10px 0'}}>
-                <GrCheckmark style={{ marginRight: '5px' }} />
+              <div style={{ display: 'flex', alignItems: 'center', padding: '10px 0 10px 0'}}>
+                <GrCheckmark style={{ marginRight: '10px', color:'blue'}} />
                 {item}
               </div>
             </li>
