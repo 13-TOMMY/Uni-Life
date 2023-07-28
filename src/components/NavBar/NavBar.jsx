@@ -1,12 +1,13 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { MdFavoriteBorder, MdMailOutline } from 'react-icons/md';
+import { MdMailOutline } from 'react-icons/md';
+import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai';
 import { FavContext } from '../../contexts/FavContext';
 import Modal from 'react-modal';
 import './NavBar.css';
 
 function NavBar() {
-  const { favorites } = useContext(FavContext);
+  const { favorites, removeFromFavorites, hasFavorites } = useContext(FavContext); // Access hasFavorites from the global context
   const [showModal, setShowModal] = useState(false);
 
   const toggleModal = () => {
@@ -21,7 +22,12 @@ function NavBar() {
       </Link>
       <div className="navBar-btns">
         <div className="navBar-btns" onClick={toggleModal}>
-          <MdFavoriteBorder className='navBar-icons' />
+          {/* Use the hasFavorites state from the global context */}
+          {hasFavorites ? (
+            <AiFillHeart className='navBar-icons' />
+          ) : (
+            <AiOutlineHeart className='navBar-icons' />
+          )}
           <p className='navBar-p'>ShortList</p>
         </div>
         <div className="navBar-btns">
@@ -34,7 +40,13 @@ function NavBar() {
         <h2>Favorites</h2>
         <ul>
           {favorites.map((property) => (
-            <li key={property.id}>{property.name}</li>
+            <li key={property._id}>
+              <div>
+                <img src={property.images[0]} alt="Property" width="50" height="50" />
+                {`${property.address.street}, ${property.address.city}, ${property.address.postcode}`}
+                <button onClick={() => removeFromFavorites(property._id)}>Remove</button>
+              </div>
+            </li>
           ))}
         </ul>
         <button onClick={toggleModal}>Close</button>
