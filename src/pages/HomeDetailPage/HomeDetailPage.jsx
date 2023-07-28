@@ -8,6 +8,7 @@ import DetailBox from '../../components/DetailBox/DetailBox';
 import BedroomBox from '../../components/BedroomBox/BedroomBox';
 import { GrCheckmark } from 'react-icons/gr';
 import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai';
+import { BsFillHouseAddFill } from 'react-icons/bs';
 import './HomeDetailPage.css';
 
 function HomeDetailPage() {
@@ -95,11 +96,13 @@ function HomeDetailPage() {
       >
         <div className="modal-top">
           {/* Modal header */}
-          <h1>Book A Viewing</h1>
-          <h3>
-            {property?.address?.postcode} {property?.address?.street}
-          </h3>
-          <h3>{property?.address?.city}</h3>
+          <div className='text-modal-top '>
+          <h2 className='h2-text-contact'>Book A Viewing</h2>
+          <p className='p-text-contact'>
+            {property?.address?.postcode}, {property?.address?.street}, {property?.address?.city}
+          </p>
+          </div>
+          <BsFillHouseAddFill className='icon-text-container'/>
         </div>
 
         <form className="modal-form">
