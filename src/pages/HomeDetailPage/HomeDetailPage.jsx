@@ -1,13 +1,13 @@
 import { useState, useContext, useEffect } from 'react';
 import axios from 'axios';
 import Modal from 'react-modal';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { FavContext } from '../../contexts/FavContext';
 import ImageBox from '../../components/ImageBox/ImageBox';
 import DetailBox from '../../components/DetailBox/DetailBox';
 import BedroomBox from '../../components/BedroomBox/BedroomBox';
 import { GrCheckmark } from 'react-icons/gr';
-import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai';
+import { AiOutlineHeart, AiFillHeart, AiOutlineRollback } from 'react-icons/ai';
 import { BsFillHouseAddFill } from 'react-icons/bs';
 import './HomeDetailPage.css';
 
@@ -17,6 +17,7 @@ function HomeDetailPage() {
   const { homeid } = useParams();
   const [property, setProperty] = useState();
   const [propertyImages, setPropertyImages] = useState([]);
+  const navigate = useNavigate();
 
   const openModal = () => {
     setShowModal(true);
@@ -38,6 +39,9 @@ function HomeDetailPage() {
 
   return (
     <div className="home-detail-page">
+      <button className="back-button-hdp" onClick={() => navigate(-1)}>
+        Back to Search <AiOutlineRollback/>
+      </button>
       <div className="top-hdp">
         <div className="left-top-hdp">
           <ImageBox pics={propertyImages} className="photo-box" />
