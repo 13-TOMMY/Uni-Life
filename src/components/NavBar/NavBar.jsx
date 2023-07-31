@@ -4,6 +4,8 @@ import { MdMailOutline } from 'react-icons/md';
 import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai';
 import {MdOutlineLocalPostOffice} from 'react-icons/md';
 import { FavContext } from '../../contexts/FavContext';
+import housesLogo from '../../../public/houses.png';
+import unilifeLogo from '../../../public/UniLife.svg';
 import Modal from 'react-modal';
 import './NavBar.css';
 
@@ -23,8 +25,8 @@ function NavBar() {
   return (
     <div className='navBar-container'>
       <Link to='/' className='uniLife-logo'>
-        <img src="../../../public/houses.png" alt="UniLife Logo" />
-        <img src="../../../public/UniLife.svg" alt="UniLife" />
+        <img src={housesLogo} alt="UniLife Logo" />
+        <img src={unilifeLogo} alt="UniLife" />
       </Link>
       <div className="navBar-btns">
         <div className="navBar-btns" onClick={toggleFavoritesModal}>
