@@ -56,6 +56,12 @@
 }
 
 .sC-right {
+  
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.sC-right img{
   width: 456px;
   height: 493.581px;
 }

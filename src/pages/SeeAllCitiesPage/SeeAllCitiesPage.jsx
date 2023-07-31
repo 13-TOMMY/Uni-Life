@@ -9,7 +9,7 @@ function SeeAllCitiesPage() {
   const [cities, setCities] = useState([]);
 
   useEffect(() => {
-    axios.get("https://unilife-server.herokuapp.com/cities?limit=20")
+    axios.get("https://unilife-server.herokuapp.com/cities?limit=24")
     .then(res =>{
       setCities(res.data.response);
     })

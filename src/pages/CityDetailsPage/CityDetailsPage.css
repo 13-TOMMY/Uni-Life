@@ -6,12 +6,12 @@
   align-items: center;
 }
 .cityDeatils-banner {
-  z-index: 1;
+  z-index: 0;
 }
 .cityDeatils-homeSearch {
   width: 100%;
   position: relative;
-  z-index: 2;
+  z-index: 0;
 }
 .properties-container {
   width: 100%;
@@ -76,5 +76,5 @@
     }
     .description-img {
       width: 90%;
-}
+  }
 }

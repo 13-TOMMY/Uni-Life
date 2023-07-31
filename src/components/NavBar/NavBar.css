@@ -39,46 +39,82 @@
 }
 
 /* Modal styles */
-.modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  z-index: 9999;
-}
-
-.modal-content {
+.fav-modal-container {
   display: flex;
   flex-direction: column;
+  background-color: white;
+  z-index: 999;
+  padding: 5%;
+  min-height: 50vh;
+  border-radius: 24px;
+}
+.fav-modal-container h2 {
+  font-size: 36px;
+  font-weight: 500;
+}
+.fav-modal-background {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(194, 194, 194, 0.69);
+  backdrop-filter: blur(11.1px);
+  -webkit-backdrop-filter: blur(11.1px);
+  border: 1px solid rgba(194, 194, 194, 0.27);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
-.modal h2 {
-  margin-bottom: 15px;
-  color: #00a2e1;
+.item-fav-modal {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 5% 0;
+  width: 100%;
+  border: 1px solid #ced3d8;
+  border-radius: 14px;
 }
-
-.modal ul {
-  list-style: none;
-  padding: 0;
+.item-fav-modal-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
-
-.modal li {
-  padding: 5px 0;
+.item-fav-modal-layout img {
+  width: 100px;
+  height: 100px;
+  border-radius: 14px;
 }
-
-.modal button {
-  background-color: #00a2e1;
-  color: white;
+.p-item-fav p {
+  font-size: 20px;
+  font-weight: 400;
+}
+.item-fav-modal-layout button {
   border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+  width: fit-content;
+  height: 50px;
+  padding: 0 10px;
+  border-radius: 14px;
+  background: #3a5295;
+  color: white;
   cursor: pointer;
-  margin-top: 15px;
+  margin-right: 10px;
+}
+.fav-modal-close-btn {
+  border: none;
+  padding: 5px 16px;
+  margin: 10px;
+  border-radius: 12px;
+  background: #3a5295;
+  color: white;
+  cursor: pointer;
+  width: 400px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 /* Contact Modal */

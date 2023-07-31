@@ -41,20 +41,24 @@ function NavBar() {
         </div>
       </div>
 
-      <Modal isOpen={showFavoritesModal} onRequestClose={toggleFavoritesModal} ariaHideApp={false}>
+      <Modal isOpen={showFavoritesModal} onRequestClose={toggleFavoritesModal} ariaHideApp={false}
+      className="fav-modal-container" overlayClassName="fav-modal-background">
         <h2>Favorites</h2>
         <ul>
           {favorites.map((property) => (
-            <li key={property._id}>
-              <div>
+            <li key={property._id} style={{ listStyleType: 'none' }} className='item-fav-modal'>
+              <div className='item-fav-modal-layout'>
                 <img src={property.images[0]} alt="Property" width="50" height="50" />
-                {`${property.address.street}, ${property.address.city}, ${property.address.postcode}`}
+                <div className='p-item-fav'>
+                <p>{`${property.address.street}`}</p> <p>{`${property.address.city}`}</p> 
+                <p>{`${property.address.postcode}`}</p>
+                </div>
                 <button onClick={() => removeFromFavorites(property._id)}>Remove</button>
               </div>
             </li>
           ))}
         </ul>
-        <button onClick={toggleFavoritesModal}>Close</button>
+        <button onClick={toggleFavoritesModal} className='fav-modal-close-btn'>Close</button>
       </Modal>
 
       {/* 2nd modal */}

@@ -5,12 +5,12 @@
 }
 .homepage-banner {
   position: relative;
-  z-index: 1;
+  z-index: 0;
 }
 .homepage-searchbar {
   width: 100%;
   position: relative;
-  z-index: 2;
+  z-index: 0;
 }
 .city-pick-container{
   margin-top: 3%;
