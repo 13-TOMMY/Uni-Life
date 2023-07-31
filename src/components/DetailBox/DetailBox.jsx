@@ -13,7 +13,7 @@ function DetailBox({ property }) {
 
   return (
     <div className="details-container">
-      <div className="details-top">
+      <div className="details-top-hdp">
         <h2>
           {property?.address?.street}, {property?.address?.city}
           <br />

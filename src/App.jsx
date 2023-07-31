@@ -7,6 +7,7 @@ import CityDetailsPage from './pages/CityDetailsPage/CityDetailsPage';
 import HomeDetailPage from './pages/HomeDetailPage/HomeDetailPage';
 import './App.css';
 
+
 function App() {
   return (
     <BrowserRouter> 
