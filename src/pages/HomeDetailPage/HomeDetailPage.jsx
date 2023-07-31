@@ -54,7 +54,7 @@ function HomeDetailPage() {
             </div>
 
             <div className="right-top-hdp">
-              <DetailBox property={property} />
+              <DetailBox property={property} className="info-box"/>
 
               <div className="btn-container">
                 <button className="shortlist-btn" onClick={() => addToFavorites(property)}>

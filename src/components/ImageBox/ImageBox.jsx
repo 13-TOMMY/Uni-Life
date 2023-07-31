@@ -8,12 +8,6 @@ function ImageBox({ pics }) {
     setSelectedImage(imageUrl);
   };
 
-  if (!pics || pics.length < 4) {
-    // Handle cases where pics is not provided or has fewer than four elements.
-    // You can return a placeholder image or any other appropriate UI.
-    return null;
-  }
-
   return (
     <div className="image-container">
       <img src={selectedImage} className="image-top" />
