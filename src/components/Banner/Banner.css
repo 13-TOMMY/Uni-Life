@@ -1,50 +1,58 @@
 .banner-ul {
+  position: relative;
   height: 40vh;
   width: 100%;
-  background-image: url(src/assets/cover-img.png);
+  background-image: url(../public/cover-img.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  position: relative;
+  z-index: 0;
 }
 
 .banner-overlay {
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 1, 1) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
   position: absolute;
+  top: 0;
+  left: 0;
   height: 100%;
   width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 1, 1) 0%, rgba(255, 255, 255, 0) 100%);
+  z-index: 1;
 }
 
 .banner-text {
   position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  transform: translate(-50%, -50%);
   color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 95%;
-  z-index: 1;
+  text-align: center;
+  z-index: 2;
 }
 
 .banner-text h1 {
-  width: 50%;
-  text-align: center;
   font-size: 64px;
-  font-style: normal;
   font-weight: 500;
-  line-height: normal;
+  margin-bottom: 10px;
 }
 
 .banner-text h4 {
-  width: 60%;
-  text-align: center;
   font-size: 24px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .banner-text h1 {
+    font-size: 56px;
+  }
+  .banner-text h4 {
+    font-size: 22px;
+  }
+}
+@media (max-width: 768px) {
+  .banner-text h1 {
+    font-size: 48px;
+  }
+  .banner-text h4 {
+    font-size: 20px;
+  }
 }

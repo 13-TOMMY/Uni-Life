@@ -1,0 +1,19 @@
+.homepage-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.homepage-banner {
+  position: relative;
+  z-index: 0;
+}
+.homepage-searchbar {
+  width: 100%;
+  position: relative;
+  z-index: 0;
+}
+.city-pick-container{
+  margin-top: 3%;
+  display: flex;
+  justify-content: center;
+}

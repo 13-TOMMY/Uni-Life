@@ -1,0 +1,80 @@
+.city-details-container {
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cityDeatils-banner {
+  z-index: 0;
+}
+.cityDeatils-homeSearch {
+  width: 100%;
+  position: relative;
+  z-index: 0;
+}
+.properties-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 5% 0;
+}
+.h2-city-container {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 500;
+  width: 90%;
+  padding-bottom: 2%;
+}
+.properties {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 1440px;
+}
+
+.description-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: #F6FAFD;
+  margin: 30px;
+  border-radius: 16px;
+  max-width: 1280px;
+  min-height: 520px;
+}
+.description-text {
+  margin: 10px 30px;
+}
+.description-text h3 {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 48px;
+  padding-bottom: 30px;
+}
+.description-text p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  padding-bottom: 10px;
+}
+
+.description-img {
+  width: 40%;
+  border-radius: 24px;
+}
+@media (max-width: 1024px) {
+   .description-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .description-img {
+      width: 90%;
+  }
+}
