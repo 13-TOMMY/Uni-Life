@@ -1,35 +1,33 @@
-import React, {useState} from 'react'
-import axios from 'axios'
-import Banner from '../../components/Banner/Banner'
-import SearchBar from '../../components/SearchBar/SearchBar'
-import CityPickImg from '../../components/CityPickImg/CityPickImg'
-import CompareHp from '../../components/CompareHp/CompareHp'
-import SearchCompare from '../../components/SearchCompare/SearchCompare'
-import './Homepage.css'
-
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import Banner from '../../components/Banner/Banner';
+import SearchBar from '../../components/SearchBar/SearchBar';
+import CityPickImg from '../../components/CityPickImg/CityPickImg';
+import CompareHp from '../../components/CompareHp/CompareHp';
+import SearchCompare from '../../components/SearchCompare/SearchCompare';
+import './Homepage.css';
 
 function Homepage() {
-  const [cities, setCities] = React.useState([])
+  const [cities, setCities] = useState([]);
 
-  React.useEffect(() => {
-    console.log("homepage loaded")
-
+  useEffect(() => {
     axios.get("https://unilife-server.herokuapp.com/cities?limit=9")
-    .then(res =>{
-      console.log(res.data.response);
-      setCities(res.data.response);
-    })
-    .catch(err => console.log(err))
-    
-  }, [])
+      .then(res => {
+        setCities(res.data.response);
+      })
+      .catch(err => console.log(err));
+  }, []);
+
   return (
     <div className='homepage-container'>
       <div className='homepage-banner'>
-        <Banner headline={"Find student homes with bills included"}
-             subhead={"A simple and faster way to search for student accomodations"} />
+        <Banner
+          headline={"Find student homes with bills included"}
+          subhead={"A simple and faster way to search for student accommodations"}
+        />
       </div>
       <div className='homepage-searchbar'>
-        <SearchBar cities={cities}  />
+        <SearchBar cities={cities} />
       </div>
       <div className='city-pick-container'>
         <CityPickImg />
@@ -41,7 +39,7 @@ function Homepage() {
         <SearchCompare />
       </div>
     </div>
-  )
+  );
 }
 
-export default Homepage
+export default Homepage;

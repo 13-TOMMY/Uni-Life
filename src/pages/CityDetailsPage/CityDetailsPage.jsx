@@ -3,21 +3,19 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import Banner from '../../components/Banner/Banner';
 import HomeSearch from '../../components/HomeSearch/HomeSearch';
-import './CityDetailsPage.css'
 import PropertyAvailable from '../../components/PropertyAvailable/PropertyAvailable';
+import './CityDetailsPage.css'
 
 function CityDetailsPage() {
-  const baseUrl = 'https://unilife-server.herokuapp.com/properties/city/';
-
   const { cityid, bedcount } = useParams();
 
   const [beds, setBeds] = useState(1);
   const [type, setType] = useState('');
   const [baths, setBaths] = useState(1);
-  const [maxPrice, setMaxPrice] = useState();
+  const [maxPrice, setMaxPrice] = useState(undefined);
   const [properties, setProperties] = useState([]);
   const [numProperties, setNumProperties] = useState(0);
-  const [city, setCity] = useState();
+  const [city, setCity] = useState({});
 
   const fetchData = (query) => {
     axios
@@ -39,7 +37,8 @@ function CityDetailsPage() {
     };
     fetchData(query);
 
-    axios.get(`https://unilife-server.herokuapp.com/cities/${cityid}`)
+    axios
+      .get(`https://unilife-server.herokuapp.com/cities/${cityid}`)
       .then((res) => {
         setCity(res.data.data[0]);
       })
