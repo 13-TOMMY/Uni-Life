@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import Banner from '../../components/Banner/Banner';
 import HomeSearch from '../../components/HomeSearch/HomeSearch';
 import PropertyAvailable from '../../components/PropertyAvailable/PropertyAvailable';
+import Students from '../../../public/students.png'
 import './CityDetailsPage.css'
 
 function CityDetailsPage() {
@@ -69,7 +70,7 @@ function CityDetailsPage() {
           <p>{city?.student_life}</p>
           <p>{city?.universities}</p>
         </div>
-        <img src='../public/students.png' className="description-img" alt="student image"/>
+        <img src={Students} className="description-img" alt="student image"/>
       </div>
       </div>
     </div>

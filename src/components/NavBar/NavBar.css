@@ -241,6 +241,17 @@
     width: 90%;
     height: 90%;
   }
+  .contact-form-half{
+    width: 100%;
+  }
+  .contact-input-wrapper input,
+  .contact-input-wrapper select,
+  .contact-input-wrapper textarea {
+    width: 100%;
+  }
+  .contact-modal-btn{
+    width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -248,14 +259,6 @@
     display: none;
   }
   .text-contact-modal-top {
-    width: 100%;
-  }
-  .contact-form-half{
-    width: 100%;
-  }
-  .contact-input-wrapper input,
-  .contact-input-wrapper select,
-  .contact-input-wrapper textarea {
     width: 100%;
   }
 }

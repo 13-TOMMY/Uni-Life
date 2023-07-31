@@ -38,3 +38,9 @@
    background: #3A5295;
   color: white;
 }
+
+@media (max-width: 768px) {
+  .allcities-buttons button{
+    width: 90%;
+  }
+}
