@@ -2,7 +2,7 @@
   position: relative;
   height: 40vh;
   width: 100%;
-  background-image: url(../public/cover-img.png);
+  background-image: url(../../../public/cover-img.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
