@@ -107,12 +107,12 @@
 .fav-modal-close-btn {
   border: none;
   padding: 5px 16px;
-  margin: 10px;
+  margin: 10px 0;
   border-radius: 12px;
   background: #3a5295;
   color: white;
   cursor: pointer;
-  width: 400px;
+  width: 100%;
   height: 50px;
   font-size: 20px;
   font-weight: 600;
@@ -180,7 +180,6 @@
   justify-content: flex-start;
   width: 50%;
 }
-
 .contact-input-wrapper {
   display: flex;
   flex-direction: column;
@@ -220,7 +219,7 @@
 }
 
 /* Media query for smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .navBar-btns {
     display: flex;
     justify-content: center;
@@ -234,5 +233,29 @@
   }
   .contact-modal-form {
     flex-direction: column;
+  }
+  .fav-modal-container {
+    width: 90%;
+  }
+  .contact-modal-container {
+    width: 90%;
+    height: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .icon-text-container {
+    display: none;
+  }
+  .text-contact-modal-top {
+    width: 100%;
+  }
+  .contact-form-half{
+    width: 100%;
+  }
+  .contact-input-wrapper input,
+  .contact-input-wrapper select,
+  .contact-input-wrapper textarea {
+    width: 100%;
   }
 }

@@ -25,7 +25,7 @@ function SearchCompare() {
               <p>Shortlist your favourite properties and send enquiries in one click.</p>
             </div>
           </div>
-          <button className="searchCompare-btn"><Link to={`/SeeAllCities`}>Search & Compare</Link></button>
+          <button className="searchCompare-btn"><Link to={`/SeeAllCities`} className='searchCompare-btn-link'>Search & Compare</Link></button>
         </div>
         <div className="sC-right">
           <img src={personImage} alt="person" />
