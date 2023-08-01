@@ -43,6 +43,7 @@
   padding: 3%;
 }
 .detail-small-box p {
+  text-align: center;
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
@@ -58,4 +59,19 @@
   display: flex;
   align-items: center;
   gap: 10px;
+}
+@media (max-width: 1024px) {
+  .details-container{
+    margin-top: 20px;
+  }
+  .detail-small-box h2 {
+    font-size: 22px;
+    font-weight: 600;
+  }
+}
+@media (max-width: 768px) {
+  .detail-small-box h2 {
+    font-size: 18x;
+    font-weight: 500;
+  }
 }

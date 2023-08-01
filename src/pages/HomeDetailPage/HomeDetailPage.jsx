@@ -105,7 +105,6 @@ function HomeDetailPage() {
             overlayClassName="modal-background"
           >
             <div className="modal-top">
-              {/* Modal header */}
               <div className="text-modal-top">
                 <h2 className="h2-text-contact">Book A Viewing</h2>
                 <p className="p-text-contact">
@@ -137,7 +136,6 @@ function HomeDetailPage() {
                   <label>Message</label>
                   <textarea rows="10" cols="40" placeholder="Enter your message"></textarea>
                 </div>
-                {/* Submit button */}
                 <button className="modal-btn" onClick={closeModal}>
                   Submit
                 </button>
