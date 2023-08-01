@@ -55,6 +55,7 @@ function NavBar() {
                 <p>{`${property.address.street}`}</p> <p>{`${property.address.city}`}</p> 
                 <p>{`${property.address.postcode}`}</p>
                 </div>
+                <button onClick={() => removeFromFavorites(property._id)}>View</button>
                 <button onClick={() => removeFromFavorites(property._id)}>Remove</button>
               </div>
             </li>
@@ -68,7 +69,7 @@ function NavBar() {
         <div className="contact-modal-top">
           {/* Modal header */}
           <div className='text-contact-modal-top'>
-          <h1 className='h2-text-contact'>Contact us</h1>
+          <h1 className='h2-text-contact'>Contact Us</h1>
           <p className='p-text-contact'>Feel free to contact us if you have any questions.
           Looking forward to hear from you.</p>
           </div>

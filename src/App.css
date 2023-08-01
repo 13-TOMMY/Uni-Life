@@ -4,14 +4,10 @@
   box-sizing: border-box;
   font-family: 'Epilogue', sans-serif;
 }
-
-:root {
-}
-
 a {
   text-decoration: none;
 }
 .navbar-container {
-  position: relative; /* Make sure the element is positioned */
-  z-index: 9999; /* Set the desired z-index value */
+  position: relative;
+  z-index: 999;
 }
