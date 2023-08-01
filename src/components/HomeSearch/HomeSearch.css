@@ -11,7 +11,6 @@
   margin-top: -50px;
   z-index: 10;
 }
-
 .search-box {
   display: flex;
   flex-direction: column;
@@ -40,6 +39,10 @@
     min-width: 55%;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 20px 0;
+  }
+  .search-box {
+    margin: 0;
   }
   .search-box select {
     width: max(180px, 30%);
@@ -47,4 +50,5 @@
   .search-box h3 {
     display: none;
   }
+  
 }

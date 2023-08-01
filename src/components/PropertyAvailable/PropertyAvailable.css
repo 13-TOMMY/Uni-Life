@@ -111,3 +111,23 @@
   font-size: 24px;
   color: black;
 }
+
+@media (max-width: 1024px) {
+  .property-container {
+    width: 380px;
+  }
+  .property-img {
+    width: 380px;
+    height: 260px;
+  }
+}
+
+@media (max-width: 768px) {
+  .property-container {
+    width: 340px;
+  }
+  .property-img {
+    width: 340px;
+    height: 220px;
+  }
+}
