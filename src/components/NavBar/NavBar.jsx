@@ -10,7 +10,7 @@ import Modal from 'react-modal';
 import './NavBar.css';
 
 function NavBar() {
-  const { favorites, removeFromFavorites, hasFavorites } = useContext(FavContext);
+  const { favorites, removeFromFavorites, hasFavorites, viewFromFavorites } = useContext(FavContext);
   const [showFavoritesModal, setShowFavoritesModal] = useState(false);
   const [showContactModal, setShowContactModal] = useState(false);
 
@@ -55,8 +55,10 @@ function NavBar() {
                 <p>{`${property.address.street}`}</p> <p>{`${property.address.city}`}</p> 
                 <p>{`${property.address.postcode}`}</p>
                 </div>
-                <button onClick={() => removeFromFavorites(property._id)}>View</button>
+                <div className='button-stack-fav'>
+                <button onClick={() => { viewFromFavorites(property._id); setShowFavoritesModal(false); }}>View</button>
                 <button onClick={() => removeFromFavorites(property._id)}>Remove</button>
+                </div>
               </div>
             </li>
           ))}

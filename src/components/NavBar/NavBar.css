@@ -42,6 +42,7 @@
 .fav-modal-container {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   background-color: white;
   z-index: 999;
   padding: 5%;
@@ -94,23 +95,41 @@
   font-size: 20px;
   font-weight: 400;
 }
-.item-fav-modal-layout button {
+.button-stack-fav{
+  width: 30%;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.button-stack-fav button {
   border: none;
   width: fit-content;
-  height: 50px;
-  padding: 0 10px;
+  height: 40px;
+  width: 100%;
   border-radius: 14px;
   background: #3a5295;
   color: white;
   cursor: pointer;
   margin-right: 10px;
 }
+.button-stack-fav :last-child{
+  background-color: white;
+  color: black;
+  border: 1px solid #ced3d8;
+}
+.button-stack-fav :last-child:hover{
+  color: white;
+  background-color: darkred;
+  border: 1px solid black;
+}
 .fav-modal-close-btn {
   border: none;
   padding: 5px 16px;
   margin: 10px 0;
   border-radius: 12px;
-  background: black;
+  background: #3a5295;
   color: white;
   cursor: pointer;
   width: 100%;

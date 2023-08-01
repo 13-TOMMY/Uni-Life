@@ -1,4 +1,5 @@
 import { createContext, useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export const FavContext = createContext();
 
@@ -42,8 +43,14 @@ const FavContextProvider = ({ children }) => {
     setFavorites((prevFavorites) => prevFavorites.filter((fav) => fav._id !== propertyId));
   };
 
+  const navigate = useNavigate();
+
+  const viewFromFavorites = (propertyId) => {
+    navigate(`/homedetails/${propertyId}`);
+  }
+
   return (
-    <FavContext.Provider value={{ favorites, addToFavorites, removeFromFavorites, hasFavorites }}>
+    <FavContext.Provider value={{ favorites, addToFavorites, removeFromFavorites, viewFromFavorites, hasFavorites }}>
       {children}
     </FavContext.Provider>
   );

@@ -5,12 +5,14 @@ import Homepage from './pages/Homepage/Homepage';
 import SeeAllCitiesPage from './pages/SeeAllCitiesPage/SeeAllCitiesPage';
 import CityDetailsPage from './pages/CityDetailsPage/CityDetailsPage';
 import HomeDetailPage from './pages/HomeDetailPage/HomeDetailPage';
+import FavContextProvider from './contexts/FavContext';
 import './App.css';
 
 
 function App() {
   return (
     <BrowserRouter> 
+      <FavContextProvider>
         <NavBar className="navbar-container"/>
           <Routes>
             <Route path='/' element={<Homepage />} />
@@ -19,6 +21,7 @@ function App() {
             <Route path='/homedetails/:homeid' element={<HomeDetailPage />} />
           </Routes>
         <Footer />
+      </FavContextProvider>
     </BrowserRouter>
   );
 }
