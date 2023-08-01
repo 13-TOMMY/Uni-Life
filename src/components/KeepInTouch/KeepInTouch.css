@@ -59,16 +59,23 @@ input {
   display: flex;
   align-items: center;
   width: 150px;
+  cursor: pointer;
 }
-.social-wrapper {
+.social-wrapper p {
+  color: white;
   font-size: 20px;
-  font-style: normal;
   font-weight: 400;
   line-height: 32px;
 }
 .social-icon {
   font-size: 30px;
   margin: 0 10px;
+  color: white;
+}
+.error-message{
+  font-size: 40px;
+  font-weight: 700;
+  color: rgb(146, 4, 4);
 }
 @media (max-width: 768px) {
   .contacts-container{
@@ -87,5 +94,6 @@ input {
     width: 100%;
     justify-content: center;
     gap: 2%;
+    width: 100%;
   }
 }

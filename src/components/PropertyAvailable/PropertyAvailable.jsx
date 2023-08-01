@@ -8,7 +8,7 @@ function PropertyAvailable({ data }) {
   const { _id, images, rent, bedroom_count, bathroom_count, property_type, furnished, address } = data;
 
   return (
-    <Link className="property-container" to={`/homedetails/${_id}`}>
+    <div className="property-container" >
       <img src={images[0]} className="property-img" />
       <div className="info-box-pa">
         <div className="info-box-left">
@@ -33,11 +33,11 @@ function PropertyAvailable({ data }) {
           {`${address.street} ${address.city} ${address.postcode}`}
         </p>
       </div>
-      <div className="view-box">
+      <Link className="view-box" to={`/homedetails/${_id}`}>
           <span><MdOutlineHome /></span>
         <p>View Home</p>
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 }
 
