@@ -1,9 +1,9 @@
 import React from 'react';
 import './SearchCompare.css';
 
-import homeImage from '../../../public/home-hp.png';
-import favHeartImage from '../../../public/favHeart.svg';
-import personImage from '../../../public/person.png';
+import homeImage from '../../assets/home-hp.png';
+import favHeartImage from '../../assets/favHeart.svg';
+import personImage from '../../assets/person.png';
 import { Link } from 'react-router-dom';
 
 function SearchCompare() {

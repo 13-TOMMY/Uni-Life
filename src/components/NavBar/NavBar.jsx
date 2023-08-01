@@ -4,8 +4,8 @@ import { MdMailOutline } from 'react-icons/md';
 import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai';
 import {MdOutlineLocalPostOffice} from 'react-icons/md';
 import { FavContext } from '../../contexts/FavContext';
-import housesLogo from '../../../public/houses.png';
-import unilifeLogo from '../../../public/UniLife.svg';
+import housesLogo from '../../assets/houses.png';
+import unilifeLogo from '../../assets/UniLife.svg';
 import Modal from 'react-modal';
 import './NavBar.css';
 

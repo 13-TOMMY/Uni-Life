@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import Banner from '../../components/Banner/Banner';
 import HomeSearch from '../../components/HomeSearch/HomeSearch';
 import PropertyAvailable from '../../components/PropertyAvailable/PropertyAvailable';
-import Students from '../../../public/students.png'
+import Students from '../../assets/students.png'
 import './CityDetailsPage.css'
 
 function CityDetailsPage() {

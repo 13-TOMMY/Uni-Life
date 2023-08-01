@@ -1,9 +1,9 @@
 import React from 'react';
 import './CompareHp.css';
 
-import searchImage from '../../../public/search.svg';
-import compareImage from '../../../public/compare.svg';
-import billsImage from '../../../public/bills.png';
+import searchImage from '../../assets/search.svg';
+import compareImage from '../../assets/compare.svg';
+import billsImage from '../../assets/bills.png';
 
 function CompareHp() {
   return (
