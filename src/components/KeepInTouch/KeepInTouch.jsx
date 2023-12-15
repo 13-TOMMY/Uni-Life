@@ -1,12 +1,12 @@
-import React, {useState} from 'react'
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
-import './KeepInTouch.css'
+import "./KeepInTouch.css";
 
 function KeepInTouch() {
-  const [inputValue, setInputValue] = useState('');
+  const [inputValue, setInputValue] = useState("");
   const [isValidEmail, setIsValidEmail] = useState(true);
-  
+
   const handleInputChange = (event) => {
     const value = event.target.value;
     setInputValue(value);
@@ -15,9 +15,9 @@ function KeepInTouch() {
   };
 
   const handleKeyUp = (event) => {
-    if (event.key === 'Enter') {
+    if (event.key === "Enter") {
       if (isValidEmail) {
-        setInputValue('');
+        setInputValue("");
       }
     }
   };
@@ -26,37 +26,56 @@ function KeepInTouch() {
     <div>
       <div className="contacts-container">
         <div className="contacts-left">
-            <h3>Keep in touch</h3>
-            <p>Curious about new offerings? <br/> Sign up for our weekly newsletter and stay informed.
-            </p>
-            <input
+          <h3>Keep in touch</h3>
+          <p>
+            Curious about new offerings? <br /> Sign up for our weekly
+            newsletter and stay informed.
+          </p>
+          <input
             type="email"
             placeholder="Your email"
             value={inputValue}
             onChange={handleInputChange}
             onKeyUp={handleKeyUp}
-            className={!isValidEmail ? 'invalid-email' : ''}
+            className={!isValidEmail ? "invalid-email" : ""}
           />
-          {!isValidEmail && <p className="error-message">Please enter a valid email address.</p>}
+          {!isValidEmail && (
+            <p className="error-message">Please enter a valid email address.</p>
+          )}
         </div>
         <div className="contacts-right">
-            <h3>Let's Socialize</h3>
-            <Link className="social-wrapper" to={'https://www.facebook.com/'} target="_blank" rel="noopener noreferrer" >
-                <FaFacebook className="social-icon" />
-                <p>Facebook</p>
-            </Link>
-            <Link className="social-wrapper" to={'https://www.twitter.com/'} target="_blank" rel="noopener noreferrer">   
-                <FaTwitter className="social-icon" />
-                <p>Twitter</p>
-            </Link>
-            <Link className="social-wrapper" to={'https://www.instagram.com/'} target="_blank" rel="noopener noreferrer">
-                <FaInstagram className="social-icon" />
-                <p>Instagram</p>
-            </Link>
+          <h3>Let's Socialize</h3>
+          <Link
+            className="social-wrapper"
+            to={"https://www.facebook.com/"}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaFacebook className="social-icon" />
+            <p>Facebook</p>
+          </Link>
+          <Link
+            className="social-wrapper"
+            to={"https://www.twitter.com/"}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaTwitter className="social-icon" />
+            <p>Twitter</p>
+          </Link>
+          <Link
+            className="social-wrapper"
+            to={"https://www.instagram.com/"}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaInstagram className="social-icon" />
+            <p>Instagram</p>
+          </Link>
         </div>
+      </div>
     </div>
-    </div>
-  )
+  );
 }
 
-export default KeepInTouch
+export default KeepInTouch;
