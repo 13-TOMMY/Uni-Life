@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 import "./KeepInTouch.css";
@@ -44,7 +44,7 @@ function KeepInTouch() {
           )}
         </div>
         <div className="contacts-right">
-          <h3>Let's Socialize</h3>
+          <h3>Let&apos;s Socialize</h3>
           <Link
             className="social-wrapper"
             to={"https://www.facebook.com/"}
